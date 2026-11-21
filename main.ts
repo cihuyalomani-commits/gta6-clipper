@@ -1,25 +1,48 @@
-// A working gta6-clipper-01 entry (Node 22, standard library only): it copies VIDEO.json from the repository root to
-// /output/VIDEO.json, where the gate reads it. That is all the program has to do. The entry is the video itself: your
-// agent finds a GTA 6 moment, cuts it into a vertical clip, the clip is uploaded to YouTube as a public Short or video
-// with the bounty's line and your play code in its description, VIDEO.json names the video, and the house reads the
-// video's views from YouTube. Nothing this program writes about the video is scored.
+// gta6-clipper-01 entry for @cihuyalomani-commits (Node 22, standard library only).
 //
-// The VIDEO.json this starter ships holds a placeholder address, so the gate refuses it as it stands (valid 0).
-// Replace it with your video's address before you submit.
+// The entry is the video itself: a 90-second vertical clip cut from Windah Basudara's
+// GTA VI livestream GAMEPLAY #1 (Jason's evening at Cal Hampton's place, ending with
+// the two of them waking up in the same bed), uploaded as a public YouTube Short at
+// https://www.youtube.com/shorts/jTwNFwnMdfk with the bounty's line and our play code
+// in its description. This program does the one job the gate asks of it: it carries
+// VIDEO.json, which names that video, from the repository root to /output/VIDEO.json,
+// where the house reads it. Nothing this program writes about the video is scored;
+// the house reads the video's views from YouTube itself.
 //
-// Outside the grader's container, MAKEFUN_BOT_DIR and MAKEFUN_OUTPUT_DIR stand in for /bot and /output:
+// Run it the way the grader does (outside the grader's container, the two variables
+// stand in for /bot and /output):
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
 
-import { copyFileSync, mkdirSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const BOT_DIR = process.env.MAKEFUN_BOT_DIR ?? '/bot';
 const OUTPUT_DIR = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
-mkdirSync(OUTPUT_DIR, { recursive: true });
+const source = join(BOT_DIR, 'VIDEO.json');
+const target = join(OUTPUT_DIR, 'VIDEO.json');
+
+let raw: Buffer;
 try {
-  copyFileSync(join(BOT_DIR, 'VIDEO.json'), join(OUTPUT_DIR, 'VIDEO.json'));
+  raw = readFileSync(source);
 } catch (err) {
-  console.error(`VIDEO.json could not be copied from ${BOT_DIR}: ${(err as Error).message}`);
+  console.error(`VIDEO.json could not be read from ${BOT_DIR}: ${(err as Error).message}`);
   process.exit(1);
 }
+
+// The address must name a YouTube video; anything else is a broken entry, so refuse
+// loudly instead of handing the gate a file it cannot use.
+let address: unknown;
+try {
+  address = JSON.parse(raw.toString('utf8')).url;
+} catch (err) {
+  console.error(`VIDEO.json is not valid JSON: ${(err as Error).message}`);
+  process.exit(1);
+}
+if (typeof address !== 'string' || !/^https:\/\/(www\.youtube\.com|youtu\.be)\//.test(address)) {
+  console.error(`VIDEO.json does not name a YouTube video: ${String(address)}`);
+  process.exit(1);
+}
+
+mkdirSync(OUTPUT_DIR, { recursive: true });
+writeFileSync(target, raw);

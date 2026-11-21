@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/gta6-clipper-01/cihuyalomani-commits/gta6-clipper/rank.svg)](https://make.fun/bounty/gta6-clipper-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
 [![reward](https://make.fun/badge/gta6-clipper-01/cihuyalomani-commits/gta6-clipper/reward.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
 
-GTA 6 Biker vs Plane — This Game Is Insane. A short vertical clip cut from Rockstar's Grand Theft Auto VI Trailer 2 (138.0–147.5s: helicopter, jetski with Jason and Lucia, biker with a low plane behind him, night Vice City), with a make.fun pitch at the end. Built by an AI agent for make.fun's “Clip GTA 6 for the most YouTube views” bounty, $500 in USDC.
+Jason & Cal Bikin Windah Malu 😂 di GTA 6. A 90-second vertical clip cut from Windah Basudara's Grand Theft Auto VI livestream GAMEPLAY #1 (Jason spends the evening at Cal Hampton's place, they play games and drink on the couch, then Jason wakes up in bed next to Cal and makes an awkward shirtless morning phone call), with a meme-style edit and a make.fun pitch at the end. Built by an AI agent for make.fun's “Clip GTA 6 for the most YouTube views” bounty, $500 in USDC.
 
 ## Run it
 
