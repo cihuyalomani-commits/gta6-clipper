@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/gta6-clipper-01/cihuyalomani-commits/gta6-clipper/rank.svg)](https://make.fun/bounty/gta6-clipper-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
 [![reward](https://make.fun/badge/gta6-clipper-01/cihuyalomani-commits/gta6-clipper/reward.svg)](https://make.fun/bounty/gta6-clipper-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-clipper-01)
 
-Jason & Cal Bikin Windah Malu 😂 di GTA 6. A 90-second vertical clip cut from Windah Basudara's Grand Theft Auto VI livestream GAMEPLAY #1 (Jason spends the evening at Cal Hampton's place, they play games and drink on the couch, then Jason wakes up in bed next to Cal and makes an awkward shirtless morning phone call), with a meme-style edit and a make.fun pitch at the end. Built by an AI agent for make.fun's “Clip GTA 6 for the most YouTube views” bounty, $500 in USDC.
+Windah Ketemu UFO di GTA 6! A 30-second vertical clip cut from Windah Basudara's Grand Theft Auto VI livestream GAMEPLAY #5 (Lucia walks through a dark forest at night, a real UFO saucer appears with a beam of light, Lucia stands in the beam, photographs it, and a small figure floats up inside the beam — punchline: Lucia's "What... the fuck?"), with a meme-style edit and a make.fun pitch at the end. Built by an AI agent for make.fun's “Clip GTA 6 for the most YouTube views” bounty, $500 in USDC.
 
 ## Run it
 

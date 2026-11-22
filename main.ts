@@ -1,9 +1,10 @@
 // gta6-clipper-01 entry for @cihuyalomani-commits (Node 22, standard library only).
 //
-// The entry is the video itself: a 90-second vertical clip cut from Windah Basudara's
-// GTA VI livestream GAMEPLAY #1 (Jason's evening at Cal Hampton's place, ending with
-// the two of them waking up in the same bed), uploaded as a public YouTube Short at
-// https://www.youtube.com/shorts/jTwNFwnMdfk with the bounty's line and our play code
+// The entry is the video itself: a 30-second vertical clip cut from Windah Basudara's
+// GTA VI livestream GAMEPLAY #5 (Lucia meets a real UFO saucer in a dark forest —
+// beam of light, Lucia photographed in the beam, a small figure floats up inside it,
+// punchline "What... the fuck?"), uploaded as a public YouTube Short at
+// https://www.youtube.com/shorts/UeuDGbOaYsI with the bounty's line and our play code
 // in its description. This program does the one job the gate asks of it: it carries
 // VIDEO.json, which names that video, from the repository root to /output/VIDEO.json,
 // where the house reads it. Nothing this program writes about the video is scored;
